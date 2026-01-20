@@ -19,7 +19,7 @@ class PelangganController extends Controller
         $pelanggan = Pelanggan::latest()->paginate(10);
 
         //render view with pelanggan
-        return view('index', compact('pelanggan'));
+        return view('pelanggan.index', compact('pelanggan'));
     }
 
     /**
@@ -27,7 +27,8 @@ class PelangganController extends Controller
      */
     public function create()
     {
-
+        // Render halaman form tambah
+        return view('pelanggan.create');
     }
 
     /**
@@ -46,7 +47,8 @@ class PelangganController extends Controller
      */
     public function show(Pelanggan $pelanggan)
     {
-        //
+        // Render halaman detail dengan membawa data pelanggan
+        return view('pelanggan.show', compact('pelanggan'));
     }
 
     /**
@@ -54,7 +56,8 @@ class PelangganController extends Controller
      */
     public function edit(Pelanggan $pelanggan)
     {
-        //
+        // Render halaman form edit dengan membawa data pelanggan
+        return view('pelanggan.edit', compact('pelanggan'));
     }
 
     /**
