@@ -1,0 +1,24 @@
+<?php
+
+namespace App\Models;
+
+use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Database\Eloquent\Model;
+
+class Pelanggan extends Model
+{
+    /** @use HasFactory<\Database\Factories\PelangganFactory> */
+    use HasFactory;
+
+    //pilih satu: fillable atau guarded
+
+    //pilih fillable
+    protected $fillable = [
+        'nama',
+        'usia',
+        'alamat',
+    ];
+
+    //pilih guarded
+    //  protected $guarded = ['id'];
+}
