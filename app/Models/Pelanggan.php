@@ -21,4 +21,19 @@ class Pelanggan extends Model
 
     //pilih guarded
     //  protected $guarded = ['id'];
+
+    // --- INI NAMANYA LOCAL SCOPE ---
+    // Naming convention: scopeNamaFitur
+    public function scopeFilter($query, array $filters)
+    {
+        // Cek jika ada filter 'search'
+        $query->when($filters['search'] ?? false, function ($query, $search) {
+            return $query->where(function ($q) use ($search) {
+                // Saya bungkus dalam function($q) agar logika OR tidak bocor
+                // Ini Best Practice untuk menghindari bug query di masa depan
+                $q->where('nama', 'like', '%' . $search . '%')
+                    ->orWhere('alamat', 'like', '%' . $search . '%');
+            });
+        });
+    }
 }

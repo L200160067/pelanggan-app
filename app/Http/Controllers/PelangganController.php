@@ -7,6 +7,8 @@ use App\Models\Pelanggan;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\StorePelangganRequest;
 use App\Http\Requests\UpdatePelangganRequest;
+use App\Http\Resources\PelangganResource;
+use App\Http\Resources\PelangganCollection;
 
 class PelangganController extends Controller
 {
@@ -16,7 +18,14 @@ class PelangganController extends Controller
     public function index()
     {
         //get all pelanggan
-        $pelanggan = Pelanggan::latest()->paginate(10);
+        // Baca: "Ambil Pelanggan terbaru, filter berdasarkan request, lalu paginate."
+        // Seperti bahasa manusia, kan?
+        $pelanggan = Pelanggan::latest()
+            ->filter(request(['search'])) // Memanggil scopeFilter tadi
+            ->paginate(10);
+
+        // Pertahankan query string di URL
+        $pelanggan->appends(request()->all());
 
         //render view with pelanggan
         return view('pelanggan.index', compact('pelanggan'));

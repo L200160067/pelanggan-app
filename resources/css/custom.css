@@ -1,0 +1,244 @@
+/* ==================== Global Styles ==================== */
+body {
+    background-color: #f8f9fa;
+}
+
+.container {
+    max-width: 1200px;
+}
+
+/* ==================== Breadcrumb Styles ==================== */
+.breadcrumb {
+    background-color: transparent;
+    padding: 0;
+    border-radius: 0.375rem;
+}
+
+.breadcrumb-item a {
+    color: #0d6efd;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.breadcrumb-item a:hover {
+    color: #0c63e4;
+}
+
+.breadcrumb-item.active {
+    color: #6c757d;
+}
+
+/* ==================== Form Styles ==================== */
+.form-label {
+    font-size: 0.95rem;
+    margin-bottom: 0.5rem;
+    color: #212529;
+}
+
+.form-label i {
+    margin-right: 0.5rem;
+}
+
+.form-control,
+.form-select {
+    border-color: #dee2e6;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+    font-size: 0.95rem;
+}
+
+.form-control:focus,
+.form-select:focus {
+    border-color: #0d6efd;
+    box-shadow: 0 0 0 0.2rem rgba(13, 110, 253, 0.25);
+}
+
+.form-text {
+    font-size: 0.85rem;
+}
+
+.form-text i {
+    margin-right: 0.3rem;
+}
+
+.invalid-feedback {
+    font-size: 0.85rem;
+    display: none;
+}
+
+.form-control.is-invalid,
+.form-select.is-invalid {
+    border-color: #dc3545;
+}
+
+.form-control.is-invalid:focus,
+.form-select.is-invalid:focus {
+    border-color: #dc3545;
+    box-shadow: 0 0 0 0.2rem rgba(220, 53, 69, 0.25);
+}
+
+/* ==================== Textarea Styles ==================== */
+textarea.form-control {
+    resize: vertical;
+    min-height: 100px;
+}
+
+/* ==================== Input Group Styles ==================== */
+.input-group-text {
+    border-color: #dee2e6;
+    font-weight: 500;
+    font-size: 0.9rem;
+}
+
+/* ==================== Button Styles ==================== */
+.btn {
+    white-space: nowrap;
+    flex-shrink: 0;
+    font-weight: 500;
+    transition: all 0.2s ease;
+    border-radius: 0.375rem;
+}
+
+.btn i {
+    margin-right: 0.5rem;
+}
+
+.btn:disabled {
+    opacity: 0.65;
+    cursor: not-allowed;
+}
+
+.btn-primary {
+    background-color: #0d6efd;
+    border-color: #0d6efd;
+}
+
+.btn-primary:hover:not(:disabled) {
+    background-color: #0c63e4;
+    border-color: #0c63e4;
+}
+
+/* ==================== Card Styles ==================== */
+.card {
+    border-radius: 0.5rem;
+    transition: box-shadow 0.2s ease;
+}
+
+.card-header {
+    background-color: #f8f9fa;
+    border-bottom-color: #dee2e6;
+    padding: 1.25rem;
+}
+
+.card-body {
+    padding: 1.5rem;
+}
+
+.card-footer {
+    background-color: #f8f9fa;
+    border-top-color: #dee2e6;
+    padding: 1rem 1.5rem;
+}
+
+/* ==================== Badge Styles ==================== */
+.badge {
+    font-size: 0.85rem;
+    font-weight: 500;
+    padding: 0.5rem 0.75rem;
+}
+
+.badge i {
+    margin-right: 0.25rem;
+}
+
+/* ==================== Search Form Styles ==================== */
+.input-group {
+    flex-wrap: nowrap;
+}
+
+.search-form {
+    flex-wrap: nowrap;
+}
+
+.search-form-controls {
+    flex-wrap: wrap;
+    justify-content: flex-end;
+}
+
+/* ==================== Pagination Styles ==================== */
+.pagination {
+    margin: 0;
+    gap: 0.25rem;
+}
+
+.pagination .page-link {
+    border: 1px solid #dee2e6;
+    color: #0d6efd;
+    padding: 0.5rem 0.75rem;
+    font-size: 0.875rem;
+    border-radius: 0.375rem;
+    transition: all 0.2s ease;
+}
+
+.pagination .page-link:hover {
+    background-color: #0d6efd;
+    border-color: #0d6efd;
+    color: white;
+}
+
+.pagination .page-item.active .page-link {
+    background-color: #0d6efd;
+    border-color: #0d6efd;
+}
+
+.pagination .page-item.disabled .page-link {
+    color: #6c757d;
+    cursor: not-allowed;
+    background-color: #f8f9fa;
+}
+
+/* ==================== Table Styles ==================== */
+tbody tr {
+    transition: background-color 0.15s ease-in-out;
+}
+
+tbody tr:hover {
+    background-color: rgba(13, 110, 253, 0.05);
+}
+
+/* ==================== Responsive Styles ==================== */
+@media (max-width: 768px) {
+    .card-header {
+        padding: 1rem 0.75rem !important;
+    }
+
+    .card-header .d-flex {
+        flex-direction: column;
+        align-items: stretch !important;
+    }
+
+    .card-header h5 {
+        width: 100%;
+        margin-bottom: 1rem;
+    }
+
+    .card-header .badge {
+        align-self: flex-start;
+    }
+
+    .input-group {
+        width: 100%;
+    }
+
+    .btn {
+        width: 100%;
+        text-align: center;
+    }
+
+    .form-label {
+        font-size: 0.9rem;
+    }
+
+    .breadcrumb {
+        font-size: 0.9rem;
+    }
+}

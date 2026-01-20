@@ -1,11 +1,11 @@
-@import 'tailwindcss';
+/* 
+ * Application CSS
+ * 
+ * Untuk development, gunakan file custom.css
+ * Untuk production dengan Vite, uncomment berikut dan jalankan: npm run build
+ */
 
-@source '../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php';
-@source '../../storage/framework/views/*.php';
-@source '../**/*.blade.php';
-@source '../**/*.js';
+/* @import 'tailwindcss'; */
 
-@theme {
-    --font-sans: 'Instrument Sans', ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
-        'Segoe UI Symbol', 'Noto Color Emoji';
-}
+/* Custom styles */
+@import 'custom.css';

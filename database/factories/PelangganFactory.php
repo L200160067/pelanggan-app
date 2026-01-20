@@ -17,7 +17,9 @@ class PelangganFactory extends Factory
     public function definition(): array
     {
         return [
-            //
+            'nama' => $this->faker->name(),
+            'usia' => $this->faker->numberBetween(18, 75),
+            'alamat' => $this->faker->address(),
         ];
     }
 }
