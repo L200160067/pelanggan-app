@@ -33,7 +33,7 @@
                             <div class="text-primary" style="font-size: 1.5rem;">
                                 <i class="bi bi-person-circle"></i>
                             </div>
-                            <div class="flex-grow-1">
+                            <div class="grow">
                                 <h6 class="text-muted mb-1">
                                     <i class="bi bi-info-circle"></i> Nama Lengkap
                                 </h6>
@@ -48,7 +48,7 @@
                             <div class="text-info" style="font-size: 1.5rem;">
                                 <i class="bi bi-calendar-check"></i>
                             </div>
-                            <div class="flex-grow-1">
+                            <div class="grow">
                                 <h6 class="text-muted mb-1">
                                     <i class="bi bi-info-circle"></i> Usia
                                 </h6>
@@ -65,7 +65,7 @@
                             <div class="text-warning" style="font-size: 1.5rem;">
                                 <i class="bi bi-geo-alt"></i>
                             </div>
-                            <div class="flex-grow-1">
+                            <div class="grow">
                                 <h6 class="text-muted mb-1">
                                     <i class="bi bi-info-circle"></i> Alamat
                                 </h6>
@@ -81,7 +81,7 @@
                                 <div class="text-success" style="font-size: 1.5rem;">
                                     <i class="bi bi-calendar"></i>
                                 </div>
-                                <div class="flex-grow-1">
+                                <div class="grow">
                                     <h6 class="text-muted mb-1">
                                         <i class="bi bi-info-circle"></i> Terdaftar Pada
                                     </h6>
@@ -98,7 +98,7 @@
                                 <div class="text-secondary" style="font-size: 1.5rem;">
                                     <i class="bi bi-clock-history"></i>
                                 </div>
-                                <div class="flex-grow-1">
+                                <div class="grow">
                                     <h6 class="text-muted mb-1">
                                         <i class="bi bi-info-circle"></i> Terakhir Diupdate
                                     </h6>
