@@ -10,17 +10,12 @@ class Pelanggan extends Model
     /** @use HasFactory<\Database\Factories\PelangganFactory> */
     use HasFactory;
 
-    //pilih satu: fillable atau guarded
-
-    //pilih fillable
+    //  protected $guarded = []; //artinya semua field boleh diisi massal
     protected $fillable = [
         'nama',
         'usia',
         'alamat',
     ];
-
-    //pilih guarded
-    //  protected $guarded = ['id'];
 
     // --- INI NAMANYA LOCAL SCOPE ---
     // Naming convention: scopeNamaFitur

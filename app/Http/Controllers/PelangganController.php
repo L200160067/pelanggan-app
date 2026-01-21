@@ -19,10 +19,9 @@ class PelangganController extends Controller
     {
         //get all pelanggan
         // Baca: "Ambil Pelanggan terbaru, filter berdasarkan request, lalu paginate."
-        // Seperti bahasa manusia, kan?
         $pelanggan = Pelanggan::latest()
             ->filter(request(['search'])) // Memanggil scopeFilter tadi
-            ->paginate(10);
+            ->paginate(10); // 10 data per halaman
 
         // Pertahankan query string di URL
         $pelanggan->appends(request()->all());
@@ -45,8 +44,11 @@ class PelangganController extends Controller
      */
     public function store(StorePelangganRequest $request)
     {
+        // Simpan data pelanggan baru
+        // Validasi sudah dilakukan oleh StorePelangganRequest
         Pelanggan::create($request->validated());
 
+        // Redirect ke halaman daftar pelanggan dengan pesan sukses
         return redirect()->route('pelanggan.index')
             ->with('success', 'Pelanggan berhasil ditambahkan.');
     }
@@ -74,8 +76,11 @@ class PelangganController extends Controller
      */
     public function update(UpdatePelangganRequest $request, Pelanggan $pelanggan)
     {
+        // Update data pelanggan
+        // Validasi sudah dilakukan oleh UpdatePelangganRequest
         $pelanggan->update($request->validated());
 
+        // Redirect ke halaman daftar pelanggan dengan pesan sukses
         return redirect()->route('pelanggan.index')
             ->with('success', 'Pelanggan berhasil diperbarui.');
     }
@@ -85,8 +90,10 @@ class PelangganController extends Controller
      */
     public function destroy(Pelanggan $pelanggan)
     {
+        // Hapus data pelanggan
         $pelanggan->delete();
 
+        // Redirect ke halaman daftar pelanggan dengan pesan sukses
         return redirect()->route('pelanggan.index')
             ->with('success', 'Pelanggan berhasil dihapus.');
     }
